@@ -83,7 +83,7 @@
 				<div class="card-header">Registered Users:</div>
 				<div class="card-body">
 					<p class="card-text">No. of total users: <?php echo get_user_count();?></p>
-					<a href="regusers.php" class="btn btn-danger" target="_blank">View Registered Users</a>
+					<a href="regusers.php" class="btn btn-danger" target="">View Registered Users</a>
 				</div>
 			</div>
 		</div>
