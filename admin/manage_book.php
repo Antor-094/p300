@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>admin Dashboard</title>
+	<title>User Dashboard</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width,intial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/css/bootstrap.min.css">
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
@@ -36,12 +36,11 @@
 						<a class="dropdown-item" href="change_password.php">Change Password</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="../logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
-      
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav navbar-center">
 			<li class="nav-item">
@@ -58,71 +57,62 @@
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
 				<div class="dropdown-menu">
 					<a href="add_cat.php" class="dropdown-item">Add New Category</a>
-					<a href="manage_cat.php" class="dropdown-item">Manage Category</a>
+					<a href="" class="dropdown-item">Manage Category</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
 				<div class="dropdown-menu">
 					<a href="add_author.php" class="dropdown-item">Add New Author</a>
-					<a href="manage_author.php" class="dropdown-item">Manage Authors</a>
+					<a href="" class="dropdown-item">Manage Authors</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="issue_book.php" class="nav-link">Issue Book</a>
+				<a href="" class="nav-link">Issue Book</a>
 			</li>
 		</ul>
 	</div>
 </nav>
 
 	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
-
 	<div class="row">
-		<div class="col-md-3">
-			<div class="card bg-light" style="width: 300px">
-				<div class="card-header">Registered Users:</div>
-				<div class="card-body">
-					<p class="card-text">No. of total users: <?php echo get_user_count();?></p>
-					<a href="regusers.php" class="btn btn-danger" target="">View Registered Users</a>
-				</div>
-			</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Author</th>
+						<th>Category</th>
+						<th>Number</th>
+						<th>Price</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<?php
+					$connection = mysqli_connect("localhost","root","");
+					$db = mysqli_select_db($connection,"lms");
+					$query = "select * from books";
+					$query_run = mysqli_query($connection,$query);
+					while($row = mysqli_fetch_assoc($query_run)){
+						?>
+						<tr>
+							<td><?php echo $row['book_name'];?></td>
+							<td><?php echo $row['author_id'];?></td>
+							<td><?php echo $row['cat_id'];?></td>
+							<td><?php echo $row['book_no'];?></td>
+							<td><?php echo $row['book_price'];?></td>
+							<td>
+								<button class="btn" name=""><a href="edit_book.php?bn=<?php echo $row['book_no'];?>">Edit</a></button>
+								<button class="btn" name=""><a href="delete_book.php?bn=<?php echo $row['book_no'];?>">Delete</a></button>
+							</td>
+						</tr>
+						<?php
+					}
+				?>
+			</table>
 		</div>
-		<div class="col-md-3">
-			<div class="card bg-light" style="width: 300px">
-				<div class="card-header">Registered Books:</div>
-				<div class="card-body">
-					<p class="card-text">No. of availbale books: <?php echo get_book_count();?></p>
-					<a href="regbooks.php" class="btn btn-primary" >View Registered Books</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="card bg-light" style="width: 300px">
-				<div class="card-header">Registered Category:</div>
-				<div class="card-body">
-					<p class="card-text">No. of book's category: <?php echo get_category_count();?></p>
-					<a href="regcat.php" class="btn btn-info" >View Categories</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="card bg-light" style="width: 300px">
-				<div class="card-header">Registered Authors:</div>
-				<div class="card-body">
-					<p class="card-text">No. of availbale authors: <?php echo get_author_count();?></p>
-					<a href="regauth.php" class="btn btn-primary" >View Authors</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3" style="margin-top:10px">
-			<div class="card bg-light" style="width: 300px">
-				<div class="card-header">Issued Books:</div>
-				<div class="card-body">
-					<p class="card-text">No. Issued Books: <?php echo get_issued_book_count();?></p>
-					<a href="view_issued_book.php" class="btn btn-success" >View Issued books</a>
-				</div>
-			</div>
-		</div>
+		<div class="col-md-2"></div>
 	</div>
 </body>
 </html>
