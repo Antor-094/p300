@@ -21,6 +21,10 @@
   	<script type="text/javascript" src="bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
+  body  {
+       background-image: url("images/library2.jpeg");
+       background-color: #cccccc;
+}
   		#side_bar{
   			background-color: whitesmoke;
   			padding: 50px;
@@ -29,7 +33,7 @@
   		}
   	</style>
 </head>
-<body>
+<body >
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -51,5 +55,23 @@
 		</div>
 	</nav><br>
 	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-3">
+			<div class="card bg-light" style="width: 300px">
+				<div class="card-header">Issued Books:</div>
+				<div class="card-body">
+					<p class="card-text">No. of Issued Books: <?php echo get_user_issue_book_count();?> </p>
+					<a href="view_issued_book.php" class="btn btn-danger" target="_blank">View Issued Books</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- <div class="col-md-3" style="padding:20px ; margin-left: 20px;"> -->
+			<!-- <img align="left" src="images/library1.jpg" alt=""> -->
+		</div>
+		<!-- <div class="col-md-3"></div> -->
+		<!-- <div class="col-md-3"></div> -->
+	</div>
 </body>
 </html>

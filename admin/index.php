@@ -13,6 +13,10 @@
   			width: 300px;
   			height: 450px;
   		}
+		  .body {
+         /* background-image: url("../images/library2.jpg"); */
+         background-color: #cccccc;
+}
   	</style>
 </head>
 <body>

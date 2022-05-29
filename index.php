@@ -7,6 +7,10 @@
   	<script type="text/javascript" src="bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
 	  <style type="text/css">
+		  body  {
+       background-image: url("images/library1.jpg");
+       background-color: #cccccc;
+}
   		#side_bar{
   			background-color: whitesmoke;
   			padding: 50px;
@@ -35,7 +39,7 @@
 			</ul>
 		</div>
 	</nav><br>
-    <span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
+    <span><marquee style="color:aqua;">This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
     <div class="row">
 		<div class="col-md-4" id="side_bar">
 			<h5>Library Timing</h5>
@@ -55,14 +59,14 @@
 			</ul>
 		</div>		
 		<div class="col-md-8" id="main_content">
-			<center><h3>User Login Form</h3></center>
+			<center><h3 style="color:azure ;">User Login Form</h3></center>
 			<form action="" method="post">
 				<div class="form-group">
-					<label for="name">Email ID:</label>
+					<label for="name" style="color:azure ;">Email ID:</label>
 					<input type="text" name="email" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<label for="name">Password:</label>
+					<label for="name" style="color:azure ;">Password:</label>
 					<input type="password" name="password" class="form-control" required>
 				</div>
 				<button type="submit" name="login" class="btn btn-primary">Login</button>
