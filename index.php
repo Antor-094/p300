@@ -8,11 +8,20 @@
   	<script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
 	  <style type="text/css">
   		#side_bar{
-  			background-color: whitesmoke;
+  			background-color:rgb(210, 194, 213);
   			padding: 50px;
   			width: 300px;
   			height: 450px;
   		}
+		   .col-md-8{
+             border-radius: 5px;
+             background-color: #9db0bc;
+             padding: 20px;
+            }
+			body{
+				background-color: rgb(165, 202, 194);
+				background-image: url(images/pexels-photo-1370295.jpeg);
+			}
   	</style>
 </head>
 <body>
@@ -35,8 +44,9 @@
 			</ul>
 		</div>
 	</nav><br>
-    <span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
+    <span><marquee style="color: rgb(164, 229, 79);">This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
     <div class="row">
+		
 		<div class="col-md-4" id="side_bar">
 			<h5>Library Timing</h5>
 			<ul>
@@ -53,10 +63,11 @@
 				<li>RO Water</li>
 				<li>Peacefull Environment</li>
 			</ul>
-		</div>		
+		</div>
+		
 		<div class="col-md-8" id="main_content">
-			<center><h3>User Login Form</h3></center>
-			<form action="" method="post">
+			<center><h3 style="font-family:'Times New Roman', Times, serif ; color:blueviolet">User Login Form</h3></center>
+			<form action="" method="post" style="padding: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
 				<div class="form-group">
 					<label for="name">Email ID:</label>
 					<input type="text" name="email" class="form-control" required>
@@ -65,7 +76,7 @@
 					<label for="name">Password:</label>
 					<input type="password" name="password" class="form-control" required>
 				</div>
-				<button type="submit" name="login" class="btn btn-primary">Login</button>
+				<button type="submit" name="login" class="btn btn-primary" style="width:200px ;">Login</button>
 			</form>
 		  <a class="nav-link" href="signup.php">Not Registered yet!!</a>
 

@@ -11,8 +11,11 @@
   			background-color: whitesmoke;
   			padding: 50px;
   			width: 300px;
-  			height: 450px;
+  			height: 530px;
   		}
+		body{
+			background-color:blanchedalmond;
+		}
   	</style>
 </head>
 <body>
@@ -23,7 +26,7 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link" href="index.php">Admin Login</a>
+					<a class="nav-link" href="admin/index.php">Admin Login</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="index.php">User Login</a>
@@ -54,8 +57,8 @@
 			</ul>
 		</div>		
 		<div class="col-md-8" id="main_content">
-			<center><h3>User Registration Form</h3></center>
-			<form action="register.php" method="post">
+			<center><h3 style="font-family:'Times New Roman', Times, serif ;color:brown">User Registration Form</h3></center>
+			<form action="register.php" method="post" style="padding: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
 				<div class="form-group">
 					<label for="name">Full Name:</label>
 					<input type="text" name="name" class="form-control" required>
@@ -76,7 +79,7 @@
 					<label for="name">Address:</label>
 					<textarea rows="3" cols="40" class="form-control" name="address"></textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Register</button>
+				<button type="submit" class="btn btn-primary" style="width: 200px;">Register</button>
 			</form>
 	</div>
 	</div>

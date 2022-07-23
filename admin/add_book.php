@@ -57,18 +57,18 @@
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
 				<div class="dropdown-menu">
 					<a href="add_cat.php" class="dropdown-item">Add New Category</a>
-					<a href="" class="dropdown-item">Manage Category</a>
+					<a href="manage_cat.php" class="dropdown-item">Manage Category</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
 				<div class="dropdown-menu">
 					<a href="add_author.php" class="dropdown-item">Add New Author</a>
-					<a href="" class="dropdown-item">Manage Authors</a>
+					<a href="manage_author.php" class="dropdown-item">Manage Authors</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Issue Book</a>
+				<a href="issue_book.php" class="nav-link">Issue Book</a>
 			</li>
 		</ul>
 	</div>
@@ -117,5 +117,8 @@
 		$db = mysqli_select_db($connection,"lms");
 		$query = "insert into books values(null,'$_POST[book_name]','$_POST[book_author]','$_POST[book_cat]',$_POST[book_no],$_POST[book_price])";
 		$query_run = mysqli_query($connection,$query);
+
+		
 	}
+	
 ?>

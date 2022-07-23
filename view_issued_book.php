@@ -28,7 +28,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="user_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -41,11 +41,11 @@
 						<a class="dropdown-item" href="change_password.php">Change Password</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="../logout.php">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+<!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav navbar-center">
 			<li class="nav-item">
@@ -77,14 +77,14 @@
 			</li>
 		</ul>
 	</div>
-</nav>
+</nav> -->
 
 <span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
 <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
 		<form>
-			<table class="table-bordered" width="900px" style="text-align: center">
+			<table class="table-bordered table table-dark" width="900px" style="text-align: center">
 				<tr>
 					<th>Book Name:</th>
 					<th>Book Author:</th>

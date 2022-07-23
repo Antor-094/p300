@@ -23,7 +23,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -57,18 +57,18 @@
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
 				<div class="dropdown-menu">
 					<a href="add_cat.php" class="dropdown-item">Add New Category</a>
-					<a href="" class="dropdown-item">Manage Category</a>
+					<a href="manage_cat.php" class="dropdown-item">Manage Category</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
 				<div class="dropdown-menu">
 					<a href="add_author.php" class="dropdown-item">Add New Author</a>
-					<a href="" class="dropdown-item">Manage Authors</a>
+					<a href="manage_author.php" class="dropdown-item">Manage Authors</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Issue Book</a>
+				<a href="issue_book.php" class="nav-link">Issue Book</a>
 			</li>
 		</ul>
 	</div>
@@ -78,7 +78,7 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<table class="table table-bordered table-hover">
+			<table class="table table-bordered table-hover table table-dark">
 				<thead>
 					<tr>
 						<th>Author ID</th>

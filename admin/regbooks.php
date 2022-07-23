@@ -31,7 +31,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -87,7 +87,7 @@
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
 		<form>
-			<table class="table-bordered" width="900px" style="text-align: center">
+			<table class="table-bordered table table-dark" width="900px" style="text-align: center">
 				<tr>
 					<th>Name:</th>
 					<th>Author:</th>

@@ -8,11 +8,16 @@
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
   		#side_bar{
-  			background-color: whitesmoke;
+  			background-color:rgb(150, 156, 156);
   			padding: 50px;
   			width: 300px;
   			height: 450px;
   		}
+		body{
+			background-color: bisque;
+			background-image: url(../images/istockphoto-1200326335-1024x1024.jpg);
+			
+		}
   	</style>
 </head>
 <body>
@@ -53,9 +58,9 @@
 				<li>Peacefull Environment</li>
 			</ul>
 		</div>		
-		<div class="col-md-8" id="main_content">
-			<center><h3>Admin Login Form</h3></center>
-			<form action="" method="post">
+		<div class="col-md-8" id="main_content" style="background-color: rgb(64, 8, 66);">
+			<center><h3 style="margin-top:20px;font-family:'Times New Roman', Times, serif;color:rgb(28, 215, 153)">Admin Login Form</h3></center>
+			<form action="" method="post" style="padding: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(143, 195, 240);">
 				<div class="form-group">
 					<label for="name">Email ID:</label>
 					<input type="text" name="email" class="form-control" required>
@@ -64,7 +69,7 @@
 					<label for="name">Password:</label>
 					<input type="password" name="password" class="form-control" required>
 				</div>
-				<button type="submit" name="login" class="btn btn-primary">Login</button>
+				<button type="submit" name="login" class="btn btn-primary" style="width: 200px;">Login</button>
 			</form>
 
 			<?php

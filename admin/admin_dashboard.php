@@ -17,13 +17,17 @@
   			width: 300px;
   			height: 450px;
   		}
+		body{
+			background-color: bisque;
+			background-image: url(../images/pexels-photo-9572632.jpeg);
+		}
   	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -41,7 +45,7 @@
 		</div>
 	</nav>
       
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd"style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(143, 195, 240);">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav navbar-center">
 			<li class="nav-item">
